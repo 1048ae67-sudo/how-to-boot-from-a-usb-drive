@@ -4,9 +4,6 @@ Simple step-by-step guide to make a portable Android TV on a USB stick.
 
 You can plug this USB into almost any Windows computer and turn it into a smart TV.
 
-Based on the Techy Druid tutorial: [YouTube Video](https://youtu.be/ZyeUdOsn0mM)  
-Written guide: https://techydruid.com/android-tv-usb/
-
 ---
 
 ## What You Need
@@ -20,10 +17,7 @@ Written guide: https://techydruid.com/android-tv-usb/
 ## 1. Download the Files
 
 ### Android TV ISO
-Download the Android TV ISO from the Google Drive link in the original video description or from the guide page:
-
-- [Techy Druid Guide (contains the download link)](https://techydruid.com/android-tv-usb/)
-- Original video: [https://youtu.be/ZyeUdOsn0mM](https://youtu.be/ZyeUdOsn0mM)
+Download the Android TV ISO from a Google Drive link (search for “Android TV USB ISO” or use a trusted source that provides the image file).
 
 > The Google Drive link can sometimes show “too many users” error. Wait a few hours and try again if that happens.
 
@@ -123,8 +117,6 @@ You now have Android TV running from USB.
 
 ## Useful Links
 
-- [Original Video](https://youtu.be/ZyeUdOsn0mM)
-- [Techy Druid Written Guide](https://techydruid.com/android-tv-usb/)
 - [Rufus](https://rufus.ie)
 - [7-Zip](https://www.7-zip.org/)
 - [WinRAR](https://www.win-rar.com/)
