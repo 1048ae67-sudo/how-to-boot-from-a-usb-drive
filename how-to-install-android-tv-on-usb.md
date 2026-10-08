@@ -57,27 +57,26 @@ This `data.img` file gives Android TV extra storage for apps and settings. Skipp
 
 ---
 
-## 4. Boot from the USB
+## 4. Boot from the USB (Windows 11)
 
-### Easy way (Windows 11)
-1. Keep USB plugged in
-2. Hold **Shift** key
+### Method 1 – Easiest (Recommended)
+1. Keep the USB plugged in
+2. Hold the **Shift** key
 3. Click **Start → Power → Restart**
-4. Choose **Use a device** → select your USB
+4. On the blue screen choose **Use a device**
+5. Select your USB drive
 
-### Boot Menu way
+### Method 2 – From Settings
+1. Open **Settings**
+2. Go to **System → Recovery**
+3. Under **Advanced startup** click **Restart now**
+4. Choose **Troubleshoot → Advanced options → UEFI Firmware Settings → Restart**
+5. In the firmware menu, look for Boot or Boot Override and select the USB
+
+### Method 3 – Boot Menu during startup
 1. Restart the computer
-2. Press the Boot Menu key repeatedly:
-
-| Brand  | Key          |
-|--------|--------------|
-| ASUS   | Esc or F8    |
-| Dell   | F12          |
-| HP     | Esc or F9    |
-| Lenovo | F12          |
-| Most   | Esc, F12, F9 |
-
-Select the USB and press Enter.
+2. Immediately start tapping the Boot Menu key repeatedly (common keys: Esc, F12, F9, F10)
+3. When the menu appears, select your USB drive and press Enter
 
 ---
 
