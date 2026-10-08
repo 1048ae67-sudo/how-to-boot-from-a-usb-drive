@@ -4,9 +4,6 @@ A clean, step-by-step guide to create a **portable Google TV** on a USB stick an
 
 This turns any computer into a smart TV with the full Google TV interface, Play Store, YouTube, Netflix, and more — all from a USB drive.
 
-**Based on:** Techy Druid method  
-**Official written guide:** [techydruid.com/google-tv-usb](https://techydruid.com/google-tv-usb/)
-
 ---
 
 ## What You’ll Need
@@ -155,8 +152,6 @@ You now have a fully working portable Google TV!
 
 ## Useful Links
 
-- [Full written guide by Techy Druid](https://techydruid.com/google-tv-usb/)
-- [Original YouTube video](https://youtu.be/0DeYfTwZAgo)
 - [Rufus official site](https://rufus.ie/)
 
 ---
