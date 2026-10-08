@@ -1,162 +1,144 @@
 # How to Install Google TV on a USB Drive
 
-A clean, step-by-step guide to create a **portable Google TV** on a USB stick and boot it on any Windows PC or laptop (including ASUS).
+Simple step-by-step guide to make a portable Google TV on a USB stick.
 
-This turns any computer into a smart TV with the full Google TV interface, Play Store, YouTube, Netflix, and more — all from a USB drive.
+You can plug this USB into almost any Windows computer and turn it into a smart TV.
 
 ---
 
-## What You’ll Need
+## What You Need
 
-- USB stick **16 GB or larger** (32 GB or 64 GB recommended for better app storage)
-- USB 3.0 drive or external SSD preferred for better speed
+- USB stick **16 GB or larger** (32 GB or 64 GB is better)
 - Windows computer
 - About 30–45 minutes
 
 ---
 
-## 1. Download the Required Files
+## 1. Download the Files
 
-### Google TV 13 Package (ISO + Storage files)
-Download from one of these links (same files):
+### Google TV Files
+Download from any of these links:
 
-- **Google Drive:** [Download here](https://drive.google.com/file/d/1yWCAlPuiiCordbkPEx9Uv7jplWPE3djh/view?usp=sharing)
-- Alternative (Mega): [Download here](https://mega.nz/file/PVp3RJKD#Lrx54cvoPsl195aAm6rdCq3sqZqgjQKKd_1kjFoAfLY)
-- Alternative (MediaFire): [Download here](https://www.mediafire.com/file/8t9wn2flf2imsj8/Google_TV_13_%252B_Data.zip/file)
+- [Google Drive](https://drive.google.com/file/d/1yWCAlPuiiCordbkPEx9Uv7jplWPE3djh/view?usp=sharing)
+- [Mega](https://mega.nz/file/PVp3RJKD#Lrx54cvoPsl195aAm6rdCq3sqZqgjQKKd_1kjFoAfLY)
+- [MediaFire](https://www.mediafire.com/file/8t9wn2flf2imsj8/Google_TV_13_%252B_Data.zip/file)
 
-After downloading:
-1. Right-click the archive → **Extract All** (or use 7-Zip / WinRAR)
-2. Inside you will find:
-   - `GoogleTV13.iso` (the main system image)
-   - **Storages** folder (contains data files: 4GB / 8GB / 16GB / 32GB / 64GB)
+After download:
+1. Right-click the file → **Extract All**
+2. You will see:
+   - `GoogleTV13.iso`
+   - **Storages** folder
 
-### Rufus (Recommended Tool)
-Download from the official site:
+### Rufus
+Download here: [https://rufus.ie](https://rufus.ie)
 
-**[Download Rufus](https://rufus.ie/)**
-
----
-
-## 2. Create the Bootable USB with Rufus
-
-1. Plug in your USB stick.
-2. Open Rufus.
-3. In Rufus:
-   - **Device** → Select your USB stick (double-check the size!)
-   - Click **SELECT** and choose the `GoogleTV13.iso` file
-   - **Persistent partition size** → Drag the slider **all the way to the right** (maximum)
-   - **Partition scheme**:
-     - Choose **GPT** if your PC is modern (Windows 10/11, UEFI)
-     - Choose **MBR** if it is an older BIOS-only system
-   - File system stays **FAT32**
-4. Click **START**.
-5. Confirm that all data on the USB will be erased.
-6. Wait until Rufus finishes (usually 5–10 minutes).
+### Optional Tools (for extracting files)
+- [7-Zip](https://www.7-zip.org/)
+- [WinRAR](https://www.win-rar.com/)
 
 ---
 
-## 3. Unlock Full Storage (Very Important)
+## 2. Make the USB Bootable
 
-By default the system is limited. Follow these steps carefully:
+1. Plug in your USB stick
+2. Open Rufus
+3. Select your USB stick under **Device**
+4. Click **SELECT** and choose `GoogleTV13.iso`
+5. Drag the **Persistent partition size** slider all the way to the right
+6. Partition scheme:
+   - Choose **GPT** (for most modern PCs)
+   - Choose **MBR** (only for very old PCs)
+7. Click **START** and wait until it finishes
 
-1. Open **Disk Management** (right-click Start → Disk Management).
-2. Find your USB drive.
-3. You will see a small boot partition and a larger persistence partition.
-4. Right-click the **persistence / large partition** → **Delete Volume**.
-5. Right-click the now **Unallocated** space → **New Simple Volume**.
-6. Follow the wizard:
-   - Use the maximum available size
-   - Format as **exFAT**
-   - Give it a name if you want (example: SYSTEM)
-7. Finish the wizard.
+---
 
-### Move the System File
+## 3. Unlock Full Storage
 
-1. Open the **Boot partition** of the USB (the small one).
-2. Find the file named **`system.sfs`**.
-3. **Cut** this file (Ctrl + X).
-4. Paste it into the new **exFAT partition** you just created.
+1. Open **Disk Management** (right-click Start → Disk Management)
+2. Find your USB drive
+3. Right-click the large partition → **Delete Volume**
+4. Right-click the empty space → **New Simple Volume**
+5. Format it as **exFAT** and finish the wizard
 
-### Add the Data Storage File
+### Move system.sfs
+1. Open the small boot partition on the USB
+2. Cut the file named `system.sfs`
+3. Paste it into the new exFAT partition
 
-1. Go to the **Storages** folder you extracted earlier.
-2. Choose the correct data file according to your USB size:
+### Add Data File
+1. Open the **Storages** folder
+2. Choose the right size:
 
-| USB Size | Recommended Data File |
-|----------|-----------------------|
-| 16 GB    | 8 GB                  |
-| 32 GB    | 16 GB                 |
-| 64 GB    | 32 GB                 |
+| Your USB Size | Use This File |
+|---------------|---------------|
+| 16 GB         | 8 GB          |
+| 32 GB         | 16 GB         |
+| 64 GB         | 32 GB         |
 
-**Important rule:** Never choose a data file equal to the full size of your USB. Always leave some free space.
+3. Copy that file into the exFAT partition
 
-3. Copy the chosen data file into the **exFAT partition** of the USB.
-
-Your Google TV USB is now ready.
+Done. Your Google TV USB is ready.
 
 ---
 
 ## 4. Boot from the USB
 
-### Easiest Method (Windows 11)
+### Easy way (Windows 11)
+1. Keep USB plugged in
+2. Hold **Shift** key
+3. Click **Start → Power → Restart**
+4. Choose **Use a device** → select your USB
 
-1. Keep the USB plugged in.
-2. Click **Start**.
-3. Hold the **Shift** key.
-4. While holding Shift, click **Power → Restart**.
-5. On the blue screen choose **Use a device** → select your USB.
+### Boot Menu way
+1. Restart the computer
+2. Press the Boot Menu key repeatedly:
 
-### Alternative: Boot Menu
+| Brand  | Key          |
+|--------|--------------|
+| ASUS   | Esc or F8    |
+| Dell   | F12          |
+| HP     | Esc or F9    |
+| Lenovo | F12          |
+| Most   | Esc, F12, F9 |
 
-1. Shut down the computer completely.
-2. Plug in the Google TV USB.
-3. Turn the computer on and repeatedly press the **Boot Menu** key.
-
-**Common keys:**
-
-| Brand / Situation | Key |
-|-------------------|-----|
-| Most laptops      | `Esc`, `F12`, `F9` |
-| ASUS              | `Esc` or `F8` |
-| Dell              | `F12` |
-| HP                | `Esc` or `F9` |
-| Lenovo            | `F12` or `Fn + F12` |
-
-Select the USB drive and press Enter.
+Select the USB and press Enter.
 
 ---
 
-## 5. First Launch of Google TV
+## 5. First Time Setup
 
-1. The system will start loading.
-2. Choose your language.
-3. Connect to Wi-Fi (or use Ethernet if Wi-Fi does not work).
-4. Sign in with your Google account (optional but recommended for Play Store).
-5. Complete the setup.
+1. Choose language
+2. Connect to Wi-Fi
+3. Sign in with Google account (optional)
+4. Finish the setup
 
-You now have a fully working portable Google TV!
+You now have Google TV running from USB.
 
 ---
 
 ## Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| USB not detected | Try a different USB port (preferably USB 3.0) or enable “List USB Hard Drives” in Rufus |
-| Won’t boot | Disable Secure Boot and Fast Boot in BIOS |
-| Black screen | Try a different kernel option from the boot menu |
-| Limited storage | Make sure you moved `system.sfs` and added the correct data file |
-| Apps not installing | Check that you used the correct data.img size for your USB |
+| Problem              | Solution                                      |
+|----------------------|-----------------------------------------------|
+| USB not showing      | Try another USB port                          |
+| Won’t boot           | Disable Secure Boot in BIOS                   |
+| Black screen         | Try another option in the boot menu           |
+| Limited storage      | Make sure you moved `system.sfs` correctly    |
 
 ---
 
 ## Useful Links
 
-- [Rufus official site](https://rufus.ie/)
+- [Google TV Files (Google Drive)](https://drive.google.com/file/d/1yWCAlPuiiCordbkPEx9Uv7jplWPE3djh/view?usp=sharing)
+- [Google TV Files (Mega)](https://mega.nz/file/PVp3RJKD#Lrx54cvoPsl195aAm6rdCq3sqZqgjQKKd_1kjFoAfLY)
+- [Google TV Files (MediaFire)](https://www.mediafire.com/file/8t9wn2flf2imsj8/Google_TV_13_%252B_Data.zip/file)
+- [Rufus](https://rufus.ie)
+- [7-Zip](https://www.7-zip.org/)
+- [WinRAR](https://www.win-rar.com/)
 
 ---
 
-**Tip:** For the best experience, use a fast USB 3.0 drive or an external SSD. The system will feel much smoother.
+**Tip:** Use a USB 3.0 stick or external SSD for better speed.
 
 ---
 
