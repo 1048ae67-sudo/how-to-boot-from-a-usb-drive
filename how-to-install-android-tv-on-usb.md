@@ -78,6 +78,31 @@ This `data.img` file gives Android TV extra storage for apps and settings. Skipp
 2. Immediately start tapping the Boot Menu key repeatedly (common keys: Esc, F12, F9, F10)
 3. When the menu appears, select your USB drive and press Enter
 
+### Method 4 – Desktop Shortcut to UEFI/BIOS (Very Useful)
+This is the fastest way to open the BIOS/UEFI settings on your ASUS Windows 11 laptop.
+
+**Command:**
+```
+shutdown /r /fw /t 0
+```
+
+**Create the desktop shortcut:**
+1. Right-click an empty area on the desktop.
+2. Select **New → Shortcut**.
+3. In the location box, paste:
+   ```
+   shutdown /r /fw /t 0
+   ```
+4. Click **Next**.
+5. Name it: **Restart to UEFI/BIOS**
+6. Click **Finish**.
+
+**How to use it:**
+- Double-click **Restart to UEFI/BIOS**.
+- Windows will restart and try to open the UEFI/BIOS setup automatically.
+
+⚠️ **Save your work first** — the shortcut restarts the laptop immediately.
+
 ---
 
 ## 5. First Time Setup
